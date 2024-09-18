@@ -1,0 +1,628 @@
+/* Reset default styles */
+/* Ensure sections are below the sticky header */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+
+section {
+    position: relative; /* Ensure the section stays behind the header */
+    z-index: 1;
+  }
+  
+
+nav {
+    display: flex;
+    align-items: center; /* Align items vertically in the middle */
+  }
+  
+  nav img {
+    margin-right: 20px; /* Adjust space between logos */
+  }
+  
+  nav {
+    background-color: rgb(0, 0, 0);
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav .home-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: #e67e22;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+}
+  
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/yourbackground-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay effect */
+}
+
+/* Sticky header */
+/* Sticky header */
+nav {
+    background-color: rgb(0, 0, 0);
+    padding: 18px 20px; /* Padding for larger header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0; /* Sticks to the top of the viewport */
+    z-index: 9999; /* Ensure it stays on top of all content */
+    width: 100%; /* Ensure the nav spans the full width */
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow to make the header more distinct */
+  }
+  
+  
+
+  
+  nav ul li a {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    color: #e67e22;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  .home-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 20px;
+    object-fit: cover;
+    vertical-align: middle;
+  }
+  
+  
+
+nav ul li a:hover {
+    color: #e67e22;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1; /* Ensure content is above the overlay */
+}
+
+.hero-content h1 {
+
+    font-size: 48px;
+    margin-bottom: 80px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    margin-top:50%;
+    background-color: #f99100;
+    padding: 15px 30px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size:20px;
+}
+
+.cta-button:hover {
+    background-color: #f57200;
+}
+
+/* Product Section Styles */
+/* Updated Product Section Styles */
+.gallery-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+}
+
+/* Remove gray background from gallery items */
+.gallery-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    width: calc(25% - 20px);
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-color: transparent; /* Ensure background is transparent */
+    box-shadow: none; /* Remove the shadow causing the gray background */
+}
+
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Slight magnification on hover */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1); /* Magnifies image slightly on hover */
+}
+
+.gallery-item h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow to make text more readable */
+}
+
+.gallery-item .btn {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9); /* White transparent button */
+    color: #ff6b6b; /* Text color similar to mielesyflores.com */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px; /* Rounded button */
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 2;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gallery-item .btn:hover {
+    background-color: #ff6b6b; /* Red background on hover */
+    color: white; /* White text on hover */
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.3);  Overlay with transparency */
+    z-index: 1;
+}
+
+
+/* Container holding the images */
+.gallery {
+    display: flex;
+    justify-content: space-between; /* Ensure space between items */
+    align-items: center;
+    flex-wrap: wrap; /* This will help wrap items if necessary on small screens */
+    padding: 20px;
+}
+
+/* Individual item styles */
+.gallery-item {
+    width: calc(50% - 20px); /* Two items per row with some space in between */
+    margin: 10px;
+    text-align: center; /* Center-align the content inside */
+}
+
+/* Ensure images fit the container */
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Optional: Add hover effect */
+.gallery-item:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+
+/* Products Section Styling */
+#products {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: space-around; /* Space items evenly */
+    align-items: flex-start;
+    flex-wrap: wrap; /* Wrap items if the screen size is too small */
+}
+
+.gallery-item {
+    flex: 1; /* Allow each item to grow */
+    margin: 10px;
+    max-width: 300px; /* Optional: Limit max width */
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Button Styling */
+.gallery-item .btn {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff66b6;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-item .btn:hover {
+    background-color: #ff3385;
+}
+
+/* Adjust for responsiveness */
+@media screen and (max-width: 768px) {
+    .gallery-container {
+        flex-direction: column;
+    }
+
+    .gallery-item {
+        max-width: 100%;
+    }
+}
+
+
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Gallery */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    margin: 10px;
+}
+
+.gallery-item img {
+    max-width: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+/* Merged Contact and Footer Section */
+/* Section Background for Contact and Footer */
+/* Section Background for Contact and Footer */
+#contact-footer {
+    background: linear-gradient(90deg, #7a00ff 0%, #ff7bbf 100%);
+    padding: 40px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60vh; /* Adjusted height to be shorter */
+    position: relative;
+}
+
+
+/* Bee Logo and Contact Info Section */
+.logo-and-contact {
+    display: flex;
+    align-items: center;
+}
+
+.bee-logo-container {
+    background-color: #e8e463;
+    border-radius: 50%;
+    padding: 8px;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfectly center the logo */
+}
+
+.bee-logo {
+    width: 300px; /* Adjust size */
+    height: auto;
+    border-radius: 50%;
+}
+
+
+
+
+.contact-info {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height of the section */
+}
+
+.contact-info h1 {
+    font-size: 36px; /* Adjusted font size */
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 18px;
+    color: white;
+    margin-top: 5px; /* Adjust margin */
+    text-align: center;
+    margin-bottom: 20px; /* Space before the social icons */
+}
+
+
+
+/* Contact Social Info Section */
+.contact-social {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.contact-social h2 {
+    font-size: 24px; /* Slightly reduce font size */
+    margin-bottom: 10px;
+}
+
+.contact-social p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.social-icons img {
+    width: 40px; /* Set a consistent size for all social icons */
+    height: 40px; /* Same height for all */
+
+
+}
+
+.instagram-icon {
+    border-radius:300px; /* Make it circular */
+    padding: 5px; /* Adjust padding */
+}
+
+.whatsapp-icon, .facebook-icon {
+
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center the social icons */
+    gap: 20px; /* Ensure proper spacing between icons */
+    margin-top: 20px; /* Space between the icons and the rest of the content */
+}
+
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        display: none;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
+/* Show menu on mobile */
+nav.active ul {
+    display: flex;
+}
+
+/* Additional Styles */
+/* Existing CSS remains the same */
+
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    z-index: 2; /* Ensure toggle button is above overlay */
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px; /* Adjust based on your nav height */
+        right: 20px;
+        width: calc(100% - 40px);
+        display: none;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+}
+
+
+/* Full-width Banner Styling */
+.full-width-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Remove padding from the section */
+#cannabis-banner {
+    padding: 0;
+    margin: 0;
+}

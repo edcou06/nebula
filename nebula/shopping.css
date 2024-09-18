@@ -1,0 +1,473 @@
+/* Reset default styles */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #40ed46, #565ef1, #ff0000);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #000000;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#shop h1 {
+    color: rgb(255, 255, 255); /* Change to whatever color you'd prefer */
+    text-align: center; /* Ensure it stays centered */
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 60px;
+}
+
+/* Add this to shopping.css to style the "Nebula Headshop" logo */
+.logo {
+    font-size: 24px;  /* Adjust to match your desired size */
+    font-weight: bold;
+    color: #fff;  /* White color for the logo */
+  }
+
+  nav img {
+    margin-right: 20px; /* Adjust space between logos */
+  }
+  
+
+/* Navigation Bar */
+nav {
+    background-color: rgb(0, 0, 0); /* Keep the same black background */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 9999; /* Ensure it remains on top while scrolling */
+    width: 100%;
+    height: 30%;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.home-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav ul a:hover {
+    color: #e67e22;
+}
+
+
+nav ul li a:hover {
+    color: #e67e22;
+}
+
+/* Menu Toggle Button (for mobile) */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* Shopping Section */
+#shop {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.shop-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Aligns vertically */
+    margin-bottom: 40px;
+}
+
+.shop-heading h1 {
+    margin: 110px; /* Adds space between the gifs and the heading */
+    font-size: 48px; /* Adjust heading size if needed */
+}
+
+.side-gif {
+    width: 240px; /* Adjust size to your preference */
+    height: auto; /* Keep the aspect ratio */
+}
+
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px; /* Adjust spacing between items */
+}
+
+.gallery-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+    text-align: center;
+}
+
+h1, h3, p {
+    color: #333; /* Use sleek black headings */
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+button {
+    background-color: #e67e22;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff9100;
+}
+
+
+/* Controls (Filters and Sorting) */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 35px;
+    border-radius: 20px;
+}
+
+.controls > div {
+    margin: 10px 0;
+}
+
+.controls label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.controls select, .controls input[type="checkbox"] {
+
+    border: none; /* Removes the border */
+    background-color: #fff; /* Matches the background color for a clean look */
+    padding: 5px; /* Add padding if needed */
+    font-size: 16px; /* Adjust font size */
+    border-radius: 5px; /* Adds slight rounding to the corners */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a light shadow for subtle depth */
+}
+
+
+.filter-options label {
+    font-weight: normal;
+}
+
+.filter-options input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-item {
+    background-color: #fff;
+    width: calc(25% - 20px);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Add space between the product image and the product name */
+.product-item h2 {
+    margin-top: 20px; /* Adds space above the product name */
+    margin-bottom: 15px; /* Adds space below the product name (in case you want to adjust) */
+    font-size: 24px; /* Keeps the product name size as requested */
+}
+
+
+/* Style the clickable product name */
+.product-item h2 a {
+    font-size: 24px;
+    color: #e67e22; /* Aesthetic orange color */
+    text-decoration: none;
+    transition: color 0.3s;
+    margin: 20px;
+    margin-top: 3000px;
+    margin-bottom: 20px;
+}
+
+.product-item h2 a:hover {
+    color: #000; /* Change to black on hover */
+}
+
+
+.product-item .price {
+    font-size: 26px;
+    color: #000000;
+    margin: 15px 15px 15px 15px;
+}
+
+.product-item .original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+.sale-badge {
+    position: absolute;
+    top: 10px;
+    left: -30px;
+    background-color: #bd2bd4;
+    color: #fff;
+    padding: 5px 35px;
+    transform: rotate(-45deg);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.add-to-cart {
+    display: block;
+    width: calc(100% - 30px);
+    margin: 0 15px 15px 15px;
+    padding: 10px 0;
+    background-color: #e67e22;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #cf6d17;
+}
+
+/* Section Background for Contact and Footer */
+#contact-footer {
+    background: linear-gradient(90deg, #7a00ff 0%, #ff7bbf 100%);
+    padding: 40px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60vh; /* Adjusted height to be shorter */
+    position: relative;
+}
+
+
+/* Bee Logo and Contact Info Section */
+.logo-and-contact {
+    display: flex;
+    align-items: center;
+}
+
+.bee-logo-container {
+    background-color: #e8e463;
+    border-radius: 50%;
+    padding: 8px;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfectly center the logo */
+}
+
+.bee-logo {
+    width: 300px; /* Adjust size */
+    height: auto;
+    border-radius: 50%;
+}
+
+
+
+
+.contact-info {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height of the section */
+    color: white;
+}
+
+.contact-info h1 {
+    font-size: 38px; /* Adjusted font size */
+    margin: 2px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.contact-info p {
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin-top: 6px; /* Adjust margin */
+    text-align: center;
+    margin-bottom: 20px; /* Space before the social icons */
+}
+
+
+
+/* Contact Social Info Section */
+.contact-social {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: white;
+}
+
+.contact-social h2 {
+    font-size: 24px; /* Slightly reduce font size */
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contact-social p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.social-icons img {
+    width: 40px; /* Set a consistent size for all social icons */
+    height: 40px; /* Same height for all */
+
+
+}
+
+.instagram-icon {
+    border-radius:300px; /* Make it circular */
+    padding: 5px; /* Adjust padding */
+}
+
+.whatsapp-icon, .facebook-icon {
+
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center the social icons */
+    gap: 20px; /* Ensure proper spacing between icons */
+    margin-top: 20px; /* Space between the icons and the rest of the content */
+}
+
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .product-item {
+        width: calc(33.333% - 20px);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #222;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-item {
+        width: calc(50% - 20px);
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .product-item {
+        width: 100%;
+    }
+}
+

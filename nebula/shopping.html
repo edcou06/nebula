@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <meta charset="UTF-8" />
+    <title>Nebula Head Shop - Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="shopping.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <!-- Copy this section from index.html to shopping.html -->
+    <nav>
+      <a href="index.html"
+        ><img src="images/nebulaspin.gif" alt="Home Icon" class="home-icon"
+      /></a>
+        <div class="logo">Nebula Headshop</div>
+      <div class="menu-toggle"></div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="gallery.html">Galería</a></li>
+        <li><a href="shopping.html">Tienda</a></li>
+        <li><a href="contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Shopping Section -->
+    <section id="shop">
+      <div class="shop-heading">
+        <img src="images/tobaccospin.gif" alt="tobacco gif" class="side-gif" />
+        <h1>Nuestros Productos</h1>
+        <img src="images/weed.gif" alt="weed gif" class="side-gif" />
+      </div>
+
+      <!-- Filters and Sorting -->
+      <div class="controls">
+        <div class="view-options">
+          <label for="view-select">View:</label>
+          <select id="view-select">
+            <option value="8">8 per page</option>
+            <option value="16">16 per page</option>
+            <option value="32">32 per page</option>
+          </select>
+        </div>
+        <div class="sort-options">
+          <label for="sort-select">Sort by:</label>
+          <select id="sort-select">
+            <option value="default">Default</option>
+            <option value="price-asc">Price Low to High</option>
+            <option value="price-desc">Price High to Low</option>
+            <option value="name-asc">Name A-Z</option>
+            <option value="name-desc">Name Z-A</option>
+          </select>
+        </div>
+        <div class="filter-options">
+          <input type="checkbox" id="sale-only" name="sale-only" />
+          <label for="sale-only">On Sale Only</label>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="product-grid">
+        <!-- Product 1 -->
+        <div
+          class="product-item"
+          data-price="29.99"
+          data-name="Product 1"
+          data-sale="false"
+        >
+          <img src="images/product1.png" alt="Product 1" />
+          <h2><a href="product1.html">Product 1</a></h2>
+          <p class="price">$29.99</p>
+        </div>
+
+        <!-- Product 2 (On Sale) -->
+        <div
+          class="product-item"
+          data-price="19.99"
+          data-name="Product 2"
+          data-sale="true"
+        >
+          <img src="images/product2.png" alt="Product 2" />
+          <h2><a href="product2.html">Product 2</a></h2>
+          <p class="price"><span class="original-price">$24.99</span> $19.99</p>
+          <span class="sale-badge">Sale</span>
+        </div>
+
+        <!-- Product 3 -->
+        <div
+          class="product-item"
+          data-price="39.99"
+          data-name="Product 3"
+          data-sale="false"
+        >
+          <img src="images/product3.png" alt="Product 3" />
+          <h2><a href="product1.html">Product 3</a></h2>
+          <p class="price">$39.99</p>
+        </div>
+
+        <!-- Product 4 (On Sale) -->
+        <div
+          class="product-item"
+          data-price="14.99"
+          data-name="Product 4"
+          data-sale="true"
+        >
+          <img src="images/product4.png" alt="Product 4" />
+          <h2><a href="product1.html">Product 4</a></h2>
+          <p class="price"><span class="original-price">$19.99</span> $14.99</p>
+          <span class="sale-badge">Sale</span>
+        </div>
+
+        <!-- Product 5 -->
+        <div
+          class="product-item"
+          data-price="24.99"
+          data-name="Product 5"
+          data-sale="false"
+        >
+          <img src="images/product5.png" alt="Product 5" />
+          <h2><a href="product1.html">Product 5</a></h2>
+          <p class="price">$24.99</p>
+        </div>
+
+        <!-- Product 6 (On Sale) -->
+        <div
+          class="product-item"
+          data-price="9.99"
+          data-name="Product 6"
+          data-sale="true"
+        >
+          <img src="images/product6.png" alt="Product 6" />
+          <h2><a href="product1.html">Product 6</a></h2>
+          <p class="price"><span class="original-price">$14.99</span> $9.99</p>
+          <span class="sale-badge">Sale</span>
+        </div>
+
+        <!-- Product 7 -->
+        <div
+          class="product-item"
+          data-price="49.99"
+          data-name="Product 7"
+          data-sale="false"
+        >
+          <img src="images/product7.png" alt="Product 7" />
+          <h2><a href="product1.html">Product 7</a></h2>
+          <p class="price">$49.99</p>
+        </div>
+
+        <!-- Product 8 (On Sale) -->
+        <div
+          class="product-item"
+          data-price="34.99"
+          data-name="Product 8"
+          data-sale="true"
+        >
+          <img src="images/product8.png" alt="Product 8" />
+          <h2><a href="product1.html">Product 8</a></h2>
+          <p class="price"><span class="original-price">$44.99</span> $34.99</p>
+          <span class="sale-badge">Sale</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Contact Section -->
+    <section id="contact-footer">
+      <div class="logo-and-contact">
+        <div class="bee-logo-container">
+          <img src="images/nebulalogo1.jpg" alt="Bee Logo" class="bee-logo" />
+        </div>
+        <div class="contact-info">
+          <h1>nebulaheadshop.com</h1>
+          <p>Diseñando y entregando con Amor desde 2012</p>
+        </div>
+      </div>
+      <div class="contact-social">
+        <h2>Contactanos</h2>
+        <p>Te guiamos con tu compra!</p>
+        <div class="social-icons">
+          <a
+            href="https://www.instagram.com/nebulaheadshop/?hl=en"
+            target="_blank"
+          >
+            <img src="images/instalogo.png" alt="Instagram" />
+          </a>
+          <a href="https://wa.me/528331383454" target="_blank">
+            <img src="images/wplogo.png" alt="WhatsApp" />
+          </a>
+          <a
+            href="https://www.facebook.com/nebulasmokeandtattoo/?locale=es_LA"
+            target="_blank"
+          >
+            <img src="images/facebooklogo.png" alt="Facebook" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
